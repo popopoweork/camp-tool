@@ -1,8 +1,8 @@
 {
-  "name": "camp-tool",
+  "name": "pwa-test",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://popopoweork.github.io/camp-tool",
+  "homepage": "https://chinheki.github.io/pwa-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

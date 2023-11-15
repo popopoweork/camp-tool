@@ -1,20 +1,19 @@
 import axios from "axios";
-import { useCallback, useState, useContext } from 'react';
-import { MyEquipments, Equipment, User } from './types';
-import useUser, { UseUserContent } from './use-user';
+import { useCallback, useState } from "react";
+import { MyEquipments, Equipment } from './types';
 
 
 export default function UseMyEquipments() {
   console.log('init use')
   const [myEquipments, setMyEquipments] = useState<MyEquipments>();
-const user=useContext(useUser)
+
   const updateMyEquipments = useCallback(async () => {
     console.log('real updateMyEquipments')
     axios
-      .get("https://api.github.com/repos/popopoweork/camp-tool/issues/1/comments", {
+      .get("https://api.github.com/repos/chinheki/pwa-test/issues/1/comments", {
         headers: {
           Accept: "application/vnd.github+json",
-          Authorization: `Bearer ${user.token}`,
+          Authorization: `Bearer ${process.env.REACT_APP_ISSUE_TOKEN}`,
           "X-GitHub-Api-Version": "2022-11-28",
         },
       })
