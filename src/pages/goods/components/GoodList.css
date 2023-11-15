@@ -1,0 +1,22 @@
+.good-list {
+  display: flex;
+  flex-direction: column;
+}
+.good-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.good-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.error {
+  color: red;
+}
+
+.good-add-button >button{
+  width: 100%;
+  border: 0ch;
+}
