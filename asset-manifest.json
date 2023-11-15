@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pwa-test/static/css/main.4e91c39b.css",
-    "main.js": "/pwa-test/static/js/main.8e050bec.js",
-    "static/js/787.f2d71ddd.chunk.js": "/pwa-test/static/js/787.f2d71ddd.chunk.js",
-    "service-worker.js": "/pwa-test/service-worker.js",
-    "index.html": "/pwa-test/index.html",
-    "main.4e91c39b.css.map": "/pwa-test/static/css/main.4e91c39b.css.map",
-    "main.8e050bec.js.map": "/pwa-test/static/js/main.8e050bec.js.map",
-    "787.f2d71ddd.chunk.js.map": "/pwa-test/static/js/787.f2d71ddd.chunk.js.map"
+    "main.css": "/camp-tool/static/css/main.4e91c39b.css",
+    "main.js": "/camp-tool/static/js/main.ea38f3bd.js",
+    "static/js/787.7d14e4cd.chunk.js": "/camp-tool/static/js/787.7d14e4cd.chunk.js",
+    "service-worker.js": "/camp-tool/service-worker.js",
+    "index.html": "/camp-tool/index.html",
+    "main.4e91c39b.css.map": "/camp-tool/static/css/main.4e91c39b.css.map",
+    "main.ea38f3bd.js.map": "/camp-tool/static/js/main.ea38f3bd.js.map",
+    "787.7d14e4cd.chunk.js.map": "/camp-tool/static/js/787.7d14e4cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e91c39b.css",
-    "static/js/main.8e050bec.js"
+    "static/js/main.ea38f3bd.js"
   ]
 }
