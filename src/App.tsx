@@ -9,9 +9,9 @@ import UseMyEquipmentsContents, {
 function App() {
   const { myEquipments, updateMyEquipments } =UseMyEquipments()
   const {user,login}=useAuthentication()
-  useEffect(()=>{
-login()
-  },[])
+//   useEffect(()=>{
+// login()
+//   },[])
   return (
     <div className="App">
       <UseMyEquipmentsContents.Provider value={myEquipments}>
@@ -24,6 +24,7 @@ login()
               Goods
             </Link>
             <div>{user?.name}</div>
+            <button onClick={login}>login</button>
           </header>
           <Outlet />
         </UpdateMyEquipmentsContext.Provider>

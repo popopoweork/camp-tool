@@ -13,13 +13,15 @@ import {
 import axios from "axios";
 import './GoodList.css'
 import { UpdateMyEquipmentsContext } from "../../../utils/use-my-equipments-contents";
+import useUser from "../../../utils/use-user";
 
 function Edit({ equipment, add = false }: { equipment?: Equipment, add?: boolean }) {
   const [good, setGood] = useState<Equipment>(add ? initEquipment : equipment!);
   const [error, setError] = useState<FormError>({});
   const [startAdd, setStartAdd] = useState(false);
   const updateMyEquipments = useContext(UpdateMyEquipmentsContext);
-  const onChange = (field: string, e: any) => {
+const user=useContext(useUser)
+const onChange = (field: string, e: any) => {
     setGood({ ...good, [field]: e.target.value });
   };
 
@@ -32,14 +34,14 @@ function Edit({ equipment, add = false }: { equipment?: Equipment, add?: boolean
         return;
       }
       axios.patch(
-        `https://api.github.com/repos/chinheki/pwa-test/issues/comments/${good.id}`,
+        `https://api.github.com/repos/popopoweork/camp-tool/issues/comments/${good.id}`,
         {
           body: JSON.stringify(good),
         },
         {
           headers: {
             Accept: "application/vnd.github+json",
-            Authorization: `Bearer ${process.env.REACT_APP_ISSUE_TOKEN}`,
+            Authorization: `Bearer ${user?.token??''}`,
             "X-GitHub-Api-Version": "2022-11-28",
             "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"X-Requested-With"
@@ -65,14 +67,14 @@ function Edit({ equipment, add = false }: { equipment?: Equipment, add?: boolean
         return;
       }
       axios.post(
-        "https://api.github.com/repos/chinheki/pwa-test/issues/1/comments",
+        "https://api.github.com/repos/popopoweork/camp-tool/issues/1/comments",
         {
           body: JSON.stringify(good),
         },
         {
           headers: {
             Accept: "application/vnd.github+json",
-            Authorization: `Bearer ${process.env.REACT_APP_ISSUE_TOKEN}`,
+            Authorization: `Bearer ${user?.token??''}`,
             "X-GitHub-Api-Version": "2022-11-28",
           },
         }
