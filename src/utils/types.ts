@@ -20,8 +20,3 @@ export interface MyEquipments{
 }
 
 export interface FormError{[key:string]:string}
-
-export interface User{
-    name:string;
-token:string;
-}

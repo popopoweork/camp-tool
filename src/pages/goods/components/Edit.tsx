@@ -41,8 +41,6 @@ function Edit({ equipment, add = false }: { equipment?: Equipment, add?: boolean
             Accept: "application/vnd.github+json",
             Authorization: `Bearer ${process.env.REACT_APP_ISSUE_TOKEN}`,
             "X-GitHub-Api-Version": "2022-11-28",
-            "Access-Control-Allow-Origin":"*",
-            "Access-Control-Allow-Headers":"X-Requested-With"
           },
         }
       ).catch(e => {
