@@ -1,10 +1,17 @@
 import axios from "axios";
 import { useCallback, useState, useContext } from 'react';
-import { MyEquipments, Equipment, User } from './types';
-import useUser, { UseUserContent } from './use-user';
+import { MyEquipments, Equipment } from './types';
+import useUser from './use-user';
 
+import { createContext } from 'react';
 
-export default function UseMyEquipments() {
+const DEFAULT_CALLBACK = () => Promise.resolve(undefined);
+
+export default createContext<MyEquipments | undefined>(undefined);
+
+export const UpdateMyEquipments = createContext<() => Promise<void>>(DEFAULT_CALLBACK);
+
+export function UseMyEquipmentsContent() {
   console.log('init use')
   const [myEquipments, setMyEquipments] = useState<MyEquipments>();
 const user=useContext(useUser)

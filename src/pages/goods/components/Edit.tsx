@@ -1,5 +1,4 @@
 import {
-  Fragment,
   useCallback,
   useContext,
   useState,
@@ -12,13 +11,13 @@ import {
 } from "../../../utils/types";
 import axios from "axios";
 import './GoodList.css'
-import { UpdateMyEquipmentsContext } from "../../../utils/use-my-equipments-contents";
+import { UpdateMyEquipments } from "../../../utils/use-my-equipments";
 
 function Edit({ equipment, add = false }: { equipment?: Equipment, add?: boolean }) {
   const [good, setGood] = useState<Equipment>(add ? initEquipment : equipment!);
   const [error, setError] = useState<FormError>({});
   const [startAdd, setStartAdd] = useState(false);
-  const updateMyEquipments = useContext(UpdateMyEquipmentsContext);
+  const updateMyEquipments = useContext(UpdateMyEquipments);
   const onChange = (field: string, e: any) => {
     setGood({ ...good, [field]: e.target.value });
   };

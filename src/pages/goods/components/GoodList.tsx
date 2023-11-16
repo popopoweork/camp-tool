@@ -1,10 +1,10 @@
 import { useContext, useEffect } from "react";
-import useMyEquipmentsContents, { UpdateMyEquipmentsContext } from "../../../utils/use-my-equipments-contents";
+import useMyEquipments, { UpdateMyEquipments } from "../../../utils/use-my-equipments";
 import Edit from "./Edit";
 import './GoodList.css'
 function GoodList() {
-    const value = useContext(useMyEquipmentsContents);
-    const updateMyEquipments = useContext(UpdateMyEquipmentsContext);
+    const value = useContext(useMyEquipments);
+    const updateMyEquipments = useContext(UpdateMyEquipments);
     useEffect(() => {
         updateMyEquipments();
     }, [updateMyEquipments]);
